@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Reservasi Ruangan Kelas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Sistem Reservasi Ruangan Kelas</h1>
+</div>
+
+<div class="container">
+    <div class="room-section">
+        <h2>Daftar Ruangan</h2>
+        <table id="roomTable">
+            <thead>
+                <tr>
+                    <th>Nomor Ruangan</th>
+                    <th>Kapasitas</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>30</td>
+                    <td class="available">Tersedia</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>25</td>
+                    <td class="available">Tersedia</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>35</td>
+                    <td class="unavailable">Tidak Tersedia</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>40</td>
+                    <td class="available">Tersedia</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>30</td>
+                    <td class="available">Tersedia</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-section">
+        <h2>Formulir Reservasi</h2>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="name">Nama Pemesan</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="room">Nomor Ruangan</label>
+                <select id="room" required>
+                    <!-- Ruangan yang tersedia akan dimasukkan ke sini via JavaScript -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Tanggal Reservasi</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Waktu Mulai</label>
+                <input type="time" id="startTime" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Durasi (jam)</label>
+                <input type="number" id="duration" min="1" required>
+            </div>
+            <button type="submit" class="btn-submit">Pesan Ruangan</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+
+    <div class="reservation-section">
+        <h2>Daftar Reservasi</h2>
+        <table id="reservationTable">
+            <thead>
+                <tr>
+                    <th>Nama Pemesan</th>
+                    <th>Nomor Ruangan</th>
+                    <th>Tanggal</th>
+                    <th>Waktu Mulai</th>
+                    <th>Durasi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Daftar reservasi akan ditambahkan di sini -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

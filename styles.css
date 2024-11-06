@@ -1,0 +1,168 @@
+/* Reset beberapa margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9ee3ff;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #007bff;
+}
+
+/* Container untuk konten utama */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bagian Daftar Ruangan dan Formulir berjejer */
+.room-section, .form-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Layout untuk ruangan dan formulir berjejer */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.room-section, .form-section {
+    flex: 1 1 45%; /* Menyediakan ruang sekitar 45% untuk setiap bagian */
+}
+
+/* Judul tiap bagian */
+h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Tabel styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.available {
+    background-color: #28a745;
+    color: white;
+}
+
+.unavailable {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Formulir styling */
+.form-section form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Tombol Submit */
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+/* Pesan notifikasi */
+.message {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* Tabel daftar reservasi */
+#reservationTable {
+    margin-top: 20px;
+}
+
+#reservationTable th, #reservationTable td {
+    font-size: 1rem;
+}
+
+#reservationTable button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#reservationTable button:hover {
+    background-color: #c82333;
+}
+
+/* Responsif: tampilan lebih baik pada layar kecil */
+@media (max-width: 768px) {
+    .form-section form {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
